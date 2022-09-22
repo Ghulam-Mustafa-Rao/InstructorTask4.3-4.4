@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public float bombThrowSpeed;
     public int stickyBombleft = 0;
     public Slider healthBar;
+    public float sprintSpeed = 0;
     float verticalInput = 0;
     float horizontalInput = 0;
     bool bombSelected = false;
@@ -43,11 +44,11 @@ public class PlayerController : MonoBehaviour
 
 
         //Limit speed of player
-        if (plRigidbody.velocity.magnitude > maxSpeed)
+        if (plRigidbody.velocity.magnitude > (maxSpeed + sprintSpeed))
         {
             plRigidbody.velocity = Vector3.ClampMagnitude(plRigidbody.velocity, maxSpeed);
         }
-        if (plRigidbody.velocity.magnitude < -maxSpeed)
+        if (plRigidbody.velocity.magnitude < (-maxSpeed - sprintSpeed))
         {
             plRigidbody.velocity = Vector3.ClampMagnitude(plRigidbody.velocity, -maxSpeed);
         }
@@ -59,11 +60,24 @@ public class PlayerController : MonoBehaviour
             GetComponent<Rigidbody>().velocity = Vector3.zero;
             //playerAnimator.SetBool("Static_b",false);
             playerAnimator.SetFloat("Speed_f", 0);
+            sprintSpeed = 0;
+            plSpeed = 1;
         }
         else
         {
             //playerAnimator.SetBool("Static_b", true);
             playerAnimator.SetFloat("Speed_f", 0.26f);
+            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
+            {
+                sprintSpeed = maxSpeed * 3;
+                plSpeed = 3;
+                playerAnimator.SetFloat("Speed_f", 0.6f);
+            }
+            else
+            {
+                plSpeed = 1;
+                sprintSpeed = 0;
+            }
         }
 
         //Throw bomb if selected
@@ -88,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
         if (GameManager.gameManager.gameOver)
         {
-            PerformDeath();
+            StartCoroutine(PerformDeath());
         }
 
         healthBar.value = GameManager.gameManager.playerLives;
@@ -126,9 +140,9 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(other.gameObject);
             //max health can be 4
-            GameManager.gameManager.playerLives=4;
-            
-            
+            GameManager.gameManager.playerLives = 4;
+
+
         }
 
     }

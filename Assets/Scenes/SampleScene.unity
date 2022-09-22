@@ -824,7 +824,8 @@ MonoBehaviour:
 
     Press G to place mine.
 
-'
+    Press
+    Shift key with W/S or Right/Left arrow key to sprint.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -851,7 +852,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.6
+  m_fontSize: 20.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4300,9 +4301,9 @@ MonoBehaviour:
   - {fileID: 9076658436588460489, guid: d75cecb2da21ace40b24c109a39cacd4, type: 3}
   - {fileID: 4561551549758178870, guid: bffaf17bc516d874da2437e071d35ca6, type: 3}
   - {fileID: 9076658436588460489, guid: d75cecb2da21ace40b24c109a39cacd4, type: 3}
-  xBound: 5
+  xBound: 3
   yBound: 0.3
-  zBound: 5
+  zBound: 3
 --- !u!1 &897138875
 GameObject:
   m_ObjectHideFlags: 0

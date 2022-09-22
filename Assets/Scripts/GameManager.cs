@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
 
         livesText.text = "Lives : " + playerLives;
         minesAvailableText.text = "Mines Available : " + minesCount;
-        if (playerLives < 0)
+        if (playerLives <= 0)
         {
             playerLives = 0;
             gameOver = true;
@@ -88,12 +88,12 @@ public class GameManager : MonoBehaviour
                 break;
             case BombType.multiBomb:
                 {
-                    currentBombimage.color = new Color(255, 0, 0, 255);
+                    currentBombimage.color = Color.red;
                 }
                 break;
             default:
                 {
-                    currentBombimage.color = new Color(59, 255, 0, 255);
+                    currentBombimage.color = Color.green;
                 }
                 break;
         }

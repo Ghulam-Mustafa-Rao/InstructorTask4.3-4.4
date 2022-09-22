@@ -24,10 +24,9 @@ public class PowerUpsSpwaner : MonoBehaviour
     {
         while(GameManager.gameManager.playerLives > 0)
         {
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(20f);
             int index = Random.Range(0, powerUps.Length);
-            Instantiate(powerUps[index], GenerateRandomLocation(), powerUps[index].transform.rotation);
-            
+            Instantiate(powerUps[index], GenerateRandomLocation(), powerUps[index].transform.rotation);   
         }
     }
 
