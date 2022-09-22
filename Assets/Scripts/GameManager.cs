@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public enum BombType
 {
@@ -18,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     public int waveNo = 1;
     public GameObject player;
-    public Vector3[] enemyMovepoints;
+    public List<Vector3> enemyMovepoints;
     public BombType bombType;
     public GameObject floor;
     public bool explosionBombAway = false;
@@ -26,6 +27,14 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI waveNoText;
     public float multiBombConuter = 0;
     public int playerLives = 3;
+    public GameObject infoPanel;
+    public TextMeshProUGUI livesText;
+    public Image currentBombimage;
+    public TextMeshProUGUI minesAvailableText;
+    public TextMeshProUGUI gameOverText;
+    public bool gameOver = false;
+
+    public int minesCount = 0;
     private void Awake()
     {
         if (gameManager == null)
@@ -36,8 +45,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        infoPanel.SetActive(true);
         waveNoText.gameObject.SetActive(true);
-        Invoke("DisableWaveNoTextAndStartGame", 2f);
+
     }
 
     // Update is called once per frame
@@ -55,14 +65,38 @@ public class GameManager : MonoBehaviour
             multiBombConuter = 0;
         }
 
-        if (multiBombConuter > 10 )
+        if (multiBombConuter > 10)
         {
             bombType = BombType.explosiveBomb;
             multiBombConuter = 0;
         }
 
+        livesText.text = "Lives : " + playerLives;
+        minesAvailableText.text = "Mines Available : " + minesCount;
+        if (playerLives < 0)
+        {
+            playerLives = 0;
+            gameOver = true;
+        }
 
-
+        switch (bombType)
+        {
+            case BombType.explosiveBomb:
+                {
+                    currentBombimage.color = new Color(149, 149, 149, 255);
+                }
+                break;
+            case BombType.multiBomb:
+                {
+                    currentBombimage.color = new Color(255, 0, 0, 255);
+                }
+                break;
+            default:
+                {
+                    currentBombimage.color = new Color(59, 255, 0, 255);
+                }
+                break;
+        }
     }
 
     void DisableWaveNoTextAndStartGame()
@@ -71,5 +105,10 @@ public class GameManager : MonoBehaviour
         gameStarted = true;
     }
 
-    
+    public void StartButtonClicked()
+    {
+        infoPanel.SetActive(false);
+        Invoke("DisableWaveNoTextAndStartGame", 2f);
+    }
+
 }

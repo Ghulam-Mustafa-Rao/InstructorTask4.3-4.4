@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombType: 2
-  radius: 1.5
+  radius: 1.1
   power: 20
   explodeCalled: 0
   explosionEffect: {fileID: 3482120800837743733}
@@ -131,7 +131,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &5668413674714495622
@@ -148,6 +148,14 @@ PrefabInstance:
     - target: {fileID: 9149267561122909948, guid: 10047a72e4dc3e64193f49fff92b93c1, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149267561122909948, guid: 10047a72e4dc3e64193f49fff92b93c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149267561122909948, guid: 10047a72e4dc3e64193f49fff92b93c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9149267561122909948, guid: 10047a72e4dc3e64193f49fff92b93c1, type: 3}
       propertyPath: m_LocalPosition.x

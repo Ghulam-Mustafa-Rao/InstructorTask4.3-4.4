@@ -57,23 +57,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteSkin.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\TransformAccessJob.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\NativeArrayHelper.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteSkinBatch.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\UpdateBoundsJob.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteLib\SpriteLibrary.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SkeletonAsset.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\Bone.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteLib\SpriteLibraryData.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\BufferManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\TransformAccessJob.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\NativeArrayHelper.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteSkinUpdateHelper.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteLib\SpriteLibraryData.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\NativeCustomSlice.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SkeletonAsset.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteLib\SpriteResolver.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteSkinUtility.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteLib\SpriteLibrary.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\NativeCustomSlice.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteLib\SpriteResolver.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteLib\SpriteLibraryAsset.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteLib\SpriteLibrarySourceAsset.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\BufferManager.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\SpriteSkinComposite.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\Bone.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.2d.animation@7.0.6\Runtime\Unity.2D.Animation.Runtime.asmdef" />
@@ -271,9 +271,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
@@ -288,6 +285,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

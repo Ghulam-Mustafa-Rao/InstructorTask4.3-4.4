@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombType: 0
-  radius: 1.5
+  radius: 1.1
   power: 20
   explodeCalled: 0
   explosionEffect: {fileID: 6601824827113895100}
@@ -152,6 +152,14 @@ PrefabInstance:
     - target: {fileID: 9149267561122909948, guid: 10047a72e4dc3e64193f49fff92b93c1, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149267561122909948, guid: 10047a72e4dc3e64193f49fff92b93c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9149267561122909948, guid: 10047a72e4dc3e64193f49fff92b93c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9149267561122909948, guid: 10047a72e4dc3e64193f49fff92b93c1, type: 3}
       propertyPath: m_LocalPosition.x

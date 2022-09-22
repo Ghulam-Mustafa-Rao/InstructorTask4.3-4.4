@@ -56,26 +56,26 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
     <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
-    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
+    <Compile Include="Assets\Scripts\Bombs.cs" />
     <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
-    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshLink.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshModifier.cs" />
     <Compile Include="Assets\Scripts\SpwanManager.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Bombs.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
     <Compile Include="Assets\Scripts\PowerUpsSpwaner.cs" />
+    <Compile Include="Assets\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -307,9 +307,6 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\AOT\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Burst.Unsafe">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
     </Reference>
@@ -324,6 +321,9 @@
     </Reference>
     <Reference Include="Unity.Burst.Cecil.Rocks">
       <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+      <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -693,6 +693,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
+      <Project>{731ADF72-4889-1FAD-F340-8EF95E437086}</Project>
+      <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.PixelPerfect.Player.csproj">
+      <Project>{C1C77338-636A-E3E5-1CEA-0364B2A16826}</Project>
+      <Name>Unity.2D.PixelPerfect.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.Player.csproj">
+      <Project>{87F5F348-1277-E9E1-16F4-88611CCE8A22}</Project>
+      <Name>UnityEngine.UI.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.IK.Runtime.Player.csproj">
+      <Project>{C2F28FD5-BBA1-F41B-A5C0-34DF3700BB95}</Project>
+      <Name>Unity.2D.IK.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.Player.csproj">
+      <Project>{E24642AC-1238-3202-6F08-B967AACFAA72}</Project>
+      <Name>CFXRRuntime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Tilemap.Extras.Player.csproj">
+      <Project>{CD479950-FE0F-144D-70A8-ECDDBF047B22}</Project>
+      <Name>Unity.2D.Tilemap.Extras.Player</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
       <Project>{D376613A-CE46-CDF6-8729-6F626F275546}</Project>
       <Name>Unity.Timeline.Player</Name>
@@ -700,38 +724,6 @@
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
       <Project>{B5AD8448-A8AF-6D86-9C1C-EC19E5EC05FE}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
-      <Project>{7381EA1D-7561-2965-955E-9438C23E1666}</Project>
-      <Name>Unity.VisualScripting.Flow.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{87F5F348-1277-E9E1-16F4-88611CCE8A22}</Project>
-      <Name>UnityEngine.UI.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Player.csproj">
-      <Project>{E515E59A-7D1D-9880-11C2-0A1EACF80306}</Project>
-      <Name>Unity.Services.Core.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
-      <Project>{16E7A458-7935-324A-E50E-2056AC51BE94}</Project>
-      <Name>Unity.VisualScripting.Core.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Analytics.Player.csproj">
-      <Project>{17BC836F-88C4-43D6-103E-AC83FCFFC160}</Project>
-      <Name>Unity.Services.Core.Analytics.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Services.Core.Environments.Player.csproj">
-      <Project>{A7B0F095-188F-C5AD-5271-9D560DE83311}</Project>
-      <Name>Unity.Services.Core.Environments.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
-      <Project>{935B69C2-39B6-EA8D-688D-EB20B0ECF190}</Project>
-      <Name>Unity.VisualScripting.State.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="CFXRRuntime.Player.csproj">
-      <Project>{E24642AC-1238-3202-6F08-B967AACFAA72}</Project>
-      <Name>CFXRRuntime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="KinoBloom.Runtime.Player.csproj">
       <Project>{9FB49B28-A6DA-3E80-C633-C0CA93F88EF3}</Project>
@@ -741,41 +733,49 @@
       <Project>{56077DA8-62A8-1DC9-1C1C-623FD7B306A6}</Project>
       <Name>CFXRDemo.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
-      <Project>{1E5E0A8E-7F6E-1D90-E3B6-03D969B9D202}</Project>
-      <Name>Unity.2D.Common.Runtime.Player</Name>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Player.csproj">
+      <Project>{7381EA1D-7561-2965-955E-9438C23E1666}</Project>
+      <Name>Unity.VisualScripting.Flow.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.IK.Runtime.Player.csproj">
-      <Project>{C2F28FD5-BBA1-F41B-A5C0-34DF3700BB95}</Project>
-      <Name>Unity.2D.IK.Runtime.Player</Name>
+    <ProjectReference Include="Unity.Services.Core.Player.csproj">
+      <Project>{E515E59A-7D1D-9880-11C2-0A1EACF80306}</Project>
+      <Name>Unity.Services.Core.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.Player.csproj">
-      <Project>{0D969964-4D3C-7F10-2D2B-8457BF127EC8}</Project>
-      <Name>Unity.2D.SpriteShape.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.PixelPerfect.Player.csproj">
-      <Project>{C1C77338-636A-E3E5-1CEA-0364B2A16826}</Project>
-      <Name>Unity.2D.PixelPerfect.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Extras.Player.csproj">
-      <Project>{CD479950-FE0F-144D-70A8-ECDDBF047B22}</Project>
-      <Name>Unity.2D.Tilemap.Extras.Player</Name>
+    <ProjectReference Include="Unity.VisualScripting.Core.Player.csproj">
+      <Project>{16E7A458-7935-324A-E50E-2056AC51BE94}</Project>
+      <Name>Unity.VisualScripting.Core.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Player.csproj">
       <Project>{3C4171A0-A5BE-A492-12B3-98E718F40FC2}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
-    <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
-      <Project>{867B7FA2-095A-2214-D0AA-39A9C310ABE7}</Project>
-      <Name>Unity.2D.Animation.Runtime.Player</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
-      <Project>{731ADF72-4889-1FAD-F340-8EF95E437086}</Project>
-      <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
+    <ProjectReference Include="Unity.Services.Core.Analytics.Player.csproj">
+      <Project>{17BC836F-88C4-43D6-103E-AC83FCFFC160}</Project>
+      <Name>Unity.Services.Core.Analytics.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Burst.Player.csproj">
       <Project>{EE0E9418-14FB-A82B-5F93-8A549B6A207E}</Project>
       <Name>Unity.Burst.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Services.Core.Environments.Player.csproj">
+      <Project>{A7B0F095-188F-C5AD-5271-9D560DE83311}</Project>
+      <Name>Unity.Services.Core.Environments.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
+      <Project>{867B7FA2-095A-2214-D0AA-39A9C310ABE7}</Project>
+      <Name>Unity.2D.Animation.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
+      <Project>{1E5E0A8E-7F6E-1D90-E3B6-03D969B9D202}</Project>
+      <Name>Unity.2D.Common.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.2D.SpriteShape.Runtime.Player.csproj">
+      <Project>{0D969964-4D3C-7F10-2D2B-8457BF127EC8}</Project>
+      <Name>Unity.2D.SpriteShape.Runtime.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.Player.csproj">
+      <Project>{935B69C2-39B6-EA8D-688D-EB20B0ECF190}</Project>
+      <Name>Unity.VisualScripting.State.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

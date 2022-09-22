@@ -56,19 +56,19 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\PublisherUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Localization\Localization.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Redux\Store.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Redux\Middleware.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Examples\PublisherExamples.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Redux\AppState.cs" />
     <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\PublisherWindow.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\AnalyticsHelper.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Redux\Reducer.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\UIElementsUtils.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\PublisherSettingsManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Localization\Localization.cs" />
     <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\PublisherBuildProcessor.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Redux\AppState.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\PublisherSettingsManager.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\PublisherUtils.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\AssemblyInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Redux\Middleware.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Redux\Reducer.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Redux\Store.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Examples\PublisherExamples.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\AnalyticsHelper.cs" />
+    <Compile Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\UIElementsUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Library\PackageCache\com.unity.connect.share@4.2.3\Editor\Unity.Play.Publisher.Editor.asmdef" />
@@ -353,14 +353,29 @@
     <Reference Include="Unity.VisualScripting.YamlDotNet">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Mdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VisualScripting.TextureAssets">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\EditorAssetResources\Unity.VisualScripting.TextureAssets.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.IonicZip">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Burst.Cecil.Pdb">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
+    </Reference>
     <Reference Include="log4netPlastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\log4netPlastic.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Cecil.Rocks">
+      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -373,21 +388,6 @@
     </Reference>
     <Reference Include="unityplastic">
       <HintPath>Library\PackageCache\com.unity.collab-proxy@1.17.1\Lib\Editor\PlasticSCM\unityplastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Unsafe">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.Unsafe.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Mdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Mdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Pdb">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Burst.Cecil.Rocks">
-      <HintPath>Library\PackageCache\com.unity.burst@1.6.6\Unity.Burst.CodeGen\Unity.Burst.Cecil.Rocks.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll</HintPath>
@@ -801,13 +801,13 @@
       <Project>{C90866FD-05B9-0BEB-5B09-969914A15845}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
-    <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{92629627-6982-80EC-9469-9D633C1CF71C}</Project>
-      <Name>UnityEngine.TestRunner</Name>
-    </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
       <Project>{0262632D-7243-7634-346D-C3829FA9C201}</Project>
       <Name>UnityEditor.TestRunner</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.TestRunner.csproj">
+      <Project>{92629627-6982-80EC-9469-9D633C1CF71C}</Project>
+      <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

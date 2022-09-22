@@ -33,15 +33,20 @@ public class SpwanManager : MonoBehaviour
             }
             else if(!invokeCalled)
             {
-                invokeCalled = true;
-                GameManager.gameManager.waveNoText.gameObject.SetActive(true);
-                GameManager.gameManager.Invoke("DisableWaveNoTextAndStartGame", 2f);
+                if (!GameManager.gameManager.infoPanel.active)
+                {
+                    invokeCalled = true;
+                    GameManager.gameManager.waveNoText.gameObject.SetActive(true);
+                    GameManager.gameManager.Invoke("DisableWaveNoTextAndStartGame", 2f);
+                }
+                
             }
         }
     }
 
     void SpwanEnemies()
     {
+        
         for (int i = 0; i < GameManager.gameManager.waveNo; i++)
         {
             GameObject enemyToSpwan = enemiesPrefabs[Random.Range(0, enemiesPrefabs.Length)];
